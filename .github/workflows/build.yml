@@ -38,6 +38,8 @@ jobs:
         sudo apt install -y zip unzip tar gzip bzip2 rar unrar
 
     - name: Build kernel
+      env: 
+        CI: false
       run: |
         cd Kernel
         chmod a+x build_kernel.sh
