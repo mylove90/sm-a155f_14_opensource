@@ -3,7 +3,8 @@ name: Build Kernel
 on:
   push:
   workflow_dispatch:
-
+env: 
+  CI: false
 jobs:
   build:
     runs-on: ubuntu-20.04
