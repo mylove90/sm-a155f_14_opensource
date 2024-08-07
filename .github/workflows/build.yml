@@ -12,16 +12,12 @@ jobs:
     - name: Maximize build space
       uses: easimon/maximize-build-space@v10
       with:
-        swap-size-mb: 10240
+        swap-size-mb: 12288
 
     - name: Checkout main repository
       uses: actions/checkout@v4.1.7
       with:
         repository: mylove90/sm-a155f_14_opensource
-
-    - name: Sync kernel source
-      run: |
-        git clone --depth=1 -b a155f https://github.com/mylove90/Samsung_Mt6789_Kernel Kernel/kernel-5.10/
 
     - name: Sync toolchains from GitLab
       run: |
